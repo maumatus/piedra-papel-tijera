@@ -1,0 +1,250 @@
+/*Aqui las reglas de tipografia OpenSans, pesos 300, 400, 600 y 700*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/*Aqui se definen las Variables de color en CSS*/
+:root{
+    --varAzul: #1B48C6;
+    --varBlanco: #ffffff;
+    --varAmarillo: #FFD000;
+    --varNaranjo: #FF6230;
+    --varCalypso: #21CFCB; 
+    --varNegro: #111111;
+}
+/*Aqui las reglas titulo*/
+body{
+    background-color: var(--varAzul);
+    margin: 0;
+    height: 70%;
+}
+
+/*Definicion de orden Flex arriba*/
+#datos{
+    background-color: var(--varBlanco);
+    height: 12rem;
+    margin-top: 0rem;
+    display: flex;
+    font-family: "Open Sans";
+}
+
+#numero-jugadas{
+    background-color: var(--varAmarillo);
+    width: 25%;
+    text-align: center;
+    padding-top: 2rem;
+    color: var(--varNegro);
+}
+
+h5{
+    margin: 0;
+    margin-bottom: -4rem;
+}
+#num{
+    font-size: 8rem;
+    margin-top: 0rem;
+}
+
+#ganador-perdedor-empate{
+    background-color: var(--varBlanco);
+    width: 75%;
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--varNaranjo);
+}
+
+h2 {
+    margin: 0;
+    padding-top: 2rem;
+}
+
+/*Reglas clase mano, define el tamaño de las manitos animadas*/
+
+.mano{
+    width: 6rem;
+    padding-left: 11rem;
+}
+
+/*Reglas seccion pc*/
+/*-------------------------------------------------*/
+
+@keyframes mov-piedra-pc {
+    0%   {transform: translate(0rem,-14rem);}
+    40% {transform: translate(0rem,0rem);}
+    60% {transform: translate(0rem,0rem);}
+    100% {transform: translate(0rem,-14rem);}
+}
+
+.jugador-pc{
+    background-color: none;
+    height: 15rem;
+    margin-top:0rem;
+    margin-bottom: 0rem;
+    position: relative;
+}
+
+#piedra-pc{
+    transform: translate(0rem,-14rem);
+    margin-bottom: 0;
+    position: relative;
+    animation-name: mov-piedra-pc;
+    animation-duration: 1.5s;
+    background-color: none;
+    z-index: -1;
+    display: initial;
+}
+
+#papel-pc{
+    transform: translate(0rem,-14rem);
+    margin-bottom: 0;
+    position: relative;
+    animation-name: mov-piedra-pc;
+    animation-duration: 1.5s;
+    background-color: none;
+    z-index: -1;
+    display: none;
+}
+
+#tijera-pc{
+    transform: translate(0rem,-14rem);
+    margin-bottom: 0;
+    position: relative;
+    animation-name: mov-piedra-pc;
+    animation-duration: 1.5s;
+    background-color: none;
+    z-index: -1;
+    display: none;
+}
+
+/*Reglas seccion media -pelea*/
+
+.seccion-pelea{
+    text-align: center;
+}
+
+/*Reglas seccion User*/
+/*----------------------------------------------------------*/
+
+.jugador-user{
+    background-color: var(--varBlanco);
+    height: 2rem;
+    margin-top:15rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+/*Esta animacion determina el movimiento de todas las manos user*/
+
+@keyframes mov-piedra-user {
+    0%   {transform: translate(0rem,0);}
+    40% {transform: translate(0rem,-10rem);}
+    60% {transform: translate(0rem,-10rem);}
+    100% {transform: translate(0rem,0rem);}
+}
+
+#piedra-user{
+    transform: translate(0rem,0rem);
+    margin-bottom: 0;
+    position: relative;
+    animation-name: none;
+    animation-duration: 1.5s;
+    background-color: none;
+    z-index: -1;
+    display: initial;
+}
+
+#papel-user{
+    transform: translate(0rem,0rem);
+    margin-bottom: 0;
+    position: relative;
+    animation-name: mov-piedra-user;
+    animation-duration: 1.5s;
+    background-color: none;
+    z-index: -2;
+    display: none;
+}
+
+#tijera-user{
+    transform: translate(0rem,0rem);
+    margin-bottom: 0;
+    position: relative;
+    animation-name: mov-piedra-user;
+    animation-duration: 1.5s;
+    background-color: none;
+    z-index: -3;
+    display: none; 
+}
+
+/*Seccion botonera*/
+/*-------------------------------------------------*/
+
+.base-botones{
+    background-color: var(--varBlanco);
+    margin-top: 0;
+    height: 16rem;
+}
+.botonera{
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 0;
+    position: sticky;
+}
+
+.boton{
+    border-radius: 16rem;
+    height: 5rem;
+}
+
+#boton-papel {
+    background-color: var(--varCalypso);
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+#boton-papel:active {
+    background-color: var(--varAzul);
+    box-shadow: 0 5px var(--varNegro);
+    transform: translateY(4px);
+}
+
+#boton-piedra {
+    background-color: var(--varAmarillo);
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+#boton-piedra:active {
+    background-color: var(--varAzul);
+    box-shadow: 0 5px var(--varNegro);
+    transform: translateY(4px);
+}
+
+#boton-tijera {
+    background-color: var(--varNaranjo);
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+#boton-tijera:active {
+    background-color: var(--varAzul);
+    box-shadow: 0 5px var(--varNegro);
+    transform: translateY(4px);
+}

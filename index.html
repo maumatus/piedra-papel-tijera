@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href="assets/css/style.css" />
+    <title>Piedra, papel o tijera</title>
+</head>
+<body>
+<!--Esta seccion contiene ingreso numero jugadas y info ganador-->
+    <section id="datos">
+        <div id="numero-jugadas">
+            <h5>Nº Jugadas</h5>
+            <h2><span id="num"></span></h2>
+        </div>
+        <div id="ganador-perdedor-empate">
+            <h1>Resultado</h1>
+        </div>
+    </section>
+<!--Esta seccion contiene cuerpo del juego-->
+    <section class="contenedor-juego">
+
+      <!--Seccion del jugador computador-->
+        <div class = "jugador-pc">
+            <img src="assets/img/piedra-pc.svg" id= "piedra-pc" class="mano" alt="piedra-pc" />
+            <img src="assets/img/papel-pc.svg" id= "papel-pc" class="mano" alt="papel-pc" />
+            <img src="assets/img/tijera-pc.svg" id= "tijera-pc" class="mano" alt="tijera-pc" />
+        </div>
+
+        
+        <div class="zona-pelea">
+
+
+        </div>
+
+        
+        <div class="jugador-user">
+            <img src="assets/img/piedra-user.svg" id= "piedra-user" class="mano" alt="piedra-pc" />
+            <img src="assets/img/papel-user.svg" id= "papel-user" class="mano" alt="papel-pc" />
+            <img src="assets/img/tijera-user.svg" id= "tijera-user" class="mano" alt="tijera-pc" />  
+        </div>  
+
+        <div class = "base-botones">
+            <!--Botonera selección jugada, esta va sobre juego-->
+            <section class="botonera">
+                <button id="boton-piedra" input type="button" class="boton" value= "0" onclick="funcionPiedra1(), funcionPiedra2(), funcionJugarPiedra()" >Piedra</button>
+                <button id="boton-papel" input type="button" class="boton" value= "1" onclick="funcionPapel1(), funcionPapel2(), funcionJugarPapel()"  value= "1" >Papel</button>
+                <button id="boton-tijera" input type="button" class="boton" value= "2" onclick="funcionTijera1(), funcionTijera2(), funcionJugarTijera()" value= "2" >Tijera</button>
+            </section>
+            
+        </div>
+
+    </section>
+
+    <!--Script logica programa-->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
